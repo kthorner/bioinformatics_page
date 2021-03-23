@@ -13,6 +13,9 @@ ui <- fluidPage(
                                       h2("Welcome"),
                                       p("This is where you can learn more about the kinds of services available to help in your research.")
                             ),
+                            wellPanel(
+                              img(src = "bioinformatics.png", height = 413, width = 300)
+                            ),
                             fluidRow(
                               align = "center",
                               img(src = "cchmc_logo.jpeg", height = 106, width = 300)
@@ -50,17 +53,25 @@ ui <- fluidPage(
                  tabPanel("Tools",
                           wellPanel(
                             h3("CSBB"),
-                            p("To try out some basic analyses on your own, including:"),
+                            p("To try out basic analyses on your own, including:"),
                             p("- Differential expression"),
                             p("- scRNA-seq analysis"),
                             p("- Functional/Pathway Enrichment"),
                             p("Please see the ",a("CSBB Github", href = "https://github.com/praneet1988/CSBB-Shiny"))
+                          ),
+                          wellPanel(
+                            h3("Seurat"),
+                            p("Seurat is the most popular tool for single cell genomics."),
+                            p("Download R-Studio and the latest version of the package, and follow this tutorial to learn more:"),
+                            a("Guided Clustering Tutorial",href="https://satijalab.org/seurat/articles/pbmc3k_tutorial.html")
                           )
                  ),
                  tabPanel("Papers",
                           wellPanel(
                             fluidRow(
                               align = "center",
+                              h3("Featured Publications",style="color:blue"),
+                              br(),
                               h3("Benchmarking and Comparison",style="color:blue"),
                               br(),
                               a(h5("A comparison of automatic cell identification methods for single-cell RNA sequencing data"), href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1795-z",style = "color:black"),
